@@ -1,0 +1,61 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- symptoms_info
+- preventions_info
+- state_name
+- search_provider
+- tested
+
+entities:
+- location
+
+slots:
+  location:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! I am Karina, a chatbot designed to help you to get info regarding COVID-19.How
+      may I help you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, do ask me if you have any more queries!
+  utter_goodbye:
+  - text: Bye, Take care,do ask me if you have any more queries!
+  utter_iamabot:
+  - text: I am Karina, a chatbot designed to help you to get info regarding COVID-19.
+  utter_symptoms:
+  - text: "Common symptoms include:\n-fever\n-tiredness\n-dry cough.\nOther symptoms\
+      \ include:\n-shortness of breath\n-aches and pains\n-sore throat\n-and very\
+      \ few people will report diarrhoea, nausea or a runny nose."
+  utter_preventions:
+  - text: "To prevent infection and to slow transmission of COVID- 19, do the following:\n\
+      -Wash your hands regularly with soap and water, or clean  them with alcohol-based\
+      \ hand rub.\n-Avoid touching your face.\n-Cover your mouth and nose when coughing\
+      \ or sneezing.\n-Stay home if you feel unwell.\n-Refrain from smoking and other\
+      \ activities that weaken the lungs.\n-Practice physical distancing."
+  utter_ask_state:
+  - text : Can you please provide the state you want to get information about? (Reply with total for whole country data)	
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_symptoms
+- utter_preventions
+- action_state_cases
+- action_tested
